@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart University</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <section id="login" class="login hidden">
+    <form id="login-form" class="card login-card">
+      <h1>Smart University</h1>
+      <p class="muted">Management System — sign in</p>
+      <label>Email <input name="email" type="email" required autocomplete="username"></label>
+      <label>Password <input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </section>
+
+  <div id="shell" class="shell hidden">
+    <aside class="sidebar">
+      <div class="brand">Smart<span>Uni</span></div>
+      <nav id="nav"></nav>
+      <div class="whoami">
+        <div id="who-name"></div>
+        <div id="who-role" class="badge"></div>
+        <button id="logout" class="btn ghost small">Sign out</button>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar"><button id="menu" class="btn ghost small">☰</button><h2 id="page-title"></h2></header>
+      <div id="view" class="view"></div>
+    </main>
+  </div>
+
+  <dialog id="modal"><form method="dialog" id="modal-form" class="card"></form></dialog>
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
